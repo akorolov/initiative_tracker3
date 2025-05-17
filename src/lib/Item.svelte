@@ -46,26 +46,26 @@ function calculateHealth(e: KeyboardEvent) {
 
 </script>
 
-<div class="flex flex-row gap-2 justify-between mb-2">
-    <a on:click={() => edit_name = true} title="Click to rename character">
+<div class="flex flex-row gap-2 justify-end mb-2">
+    <a on:click={() => edit_name = true} title="Click to rename character" class="cursor-text w-full text-lg">
         {#if edit_name}
             <input class="input" type="text" bind:value={name} on:keydown={handleKeydown} />
         {:else}
         {name}
         {/if}
     </a>
-    <div class="input-group grid-cols-[auto_1fr_auto]" style="width: 160px">
+    <div class="input-group grid-cols-[40px_140px] h-[42px]">
         <div class="ig-cell preset-tonal">
-            <span class="material-symbols-outlined text-primary-700">
+            <span class="material-symbols-outlined text-error-700">
                 favorite
                 </span>
         </div>
         <input class="ig-input" type="text" placeholder=0 on:keydown={calculateHealth} bind:value={health} />
         
-        </div>
-        <button type="button" class="btn-icon bg-surface-600-400 text-surface-contrast-600-400" on:click={handleDelete}>
-            <span class="material-symbols-outlined">skull</span>
-        </button>
+    </div>
+    <button type="button" class="btn-icon bg-surface-600-400 text-surface-contrast-600-400 w-[60px]" on:click={handleDelete}>
+        <span class="material-symbols-outlined">skull</span>
+    </button>
 </div>
 
 <TagsInput 
@@ -74,7 +74,7 @@ function calculateHealth(e: KeyboardEvent) {
         conditions = e.value;
         dispatchUpdate();
     }} 
-    tagBackground="preset-filled-warning-500" 
+    tagBackground="preset-filled-primary-500" 
     name="chips" 
     placeholder="Add conditions..." 
 />

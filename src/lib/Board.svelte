@@ -16,7 +16,7 @@
 
 <section class="board flex flex-row gap-4">
     {#each columns as column, idx (column.id)}
-  		<div class="card {column.primary ? 'bg-secondary-200-800' : 'bg-tertiary-50-950'} border-[1px] border-tertiary-200-800 w-full max-w-xl p-2 px-4" animate:flip="{{duration: flipDurationMs}}" >    
+  		<div class="card {column.primary ? 'bg-surface-200-800' : 'bg-surface-100-900'} border-[1px] border-tertiary-200-800 w-full max-w-xl p-2 px-4" animate:flip="{{duration: flipDurationMs}}" >    
 				<Column name={column.name} items={column.items} onDrop={(newItems) => handleItemFinalize(idx, newItems)} />
 			</div>
     {/each}
@@ -26,7 +26,7 @@
 <style>
     .board {
         height: 100vh;
-        width: 100%;
+		width: 100%;
         padding: 0.5em;
     }
 </style>

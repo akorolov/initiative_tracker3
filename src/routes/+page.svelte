@@ -86,7 +86,7 @@
     }
 </script>
 
-<div class="flex flex-row">
+<div class="flex flex-row p-1">
     <Board columns={columnsData} onFinalUpdate={handleBoardUpdated}/>
     
     <div class="sidebar mt-2 mr-2">

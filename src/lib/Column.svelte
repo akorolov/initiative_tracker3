@@ -75,7 +75,7 @@ function handleNewItem() {
     </div>
 </div>
 <div class="flex flex-row justify-center mt-1">
-	<button class="btn preset-filled-secondary-500" on:click={handleNewItem}>New Character</button>
+	<button class="btn preset-filled-primary-500" on:click={handleNewItem}>New Character</button>
 </div>
 
 
